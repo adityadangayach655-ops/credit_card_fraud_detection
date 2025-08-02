@@ -4,7 +4,7 @@ This project demonstrates a classic machine learning approach to identifying fra
 Dataset
 This project uses the "Credit Card Fraud Detection" dataset from Kaggle. It contains anonymized transactions made by European cardholders over a two-day period in September 2013.
 
-Download Link: Kaggle: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+Download Link: Kaggle: Credit Card Fraud Detection
 
 Project Overview
 The goal of this project is to train a model that can distinguish between legitimate and fraudulent credit card transactions. Given the anonymized transaction data, we build a classification model that is optimized to catch rare fraudulent events while minimizing false alarms.
@@ -38,10 +38,30 @@ Model Training: A Logistic Regression model was trained with the class_weight='b
 
 Evaluation: The model's performance was evaluated on the unseen test set using a confusion matrix and a classification report to analyze its precision and recall for the fraud class.
 
+Results
+The model's performance was evaluated based on its ability to correctly identify the rare fraud class.
+
+Recall (Fraud Class): The model achieved a high recall (approx. 0.92 or 92%), successfully identifying the vast majority of actual fraudulent transactions in the test set.
+
+Precision (Fraud Class): The precision was lower (approx. 0.06 or 6%), indicating that the model produced a number of false positives.
+
+Interpretation: The results show a successful trade-off for a fraud detection system. By optimizing for high recall, we ensure that most fraudulent activities are caught, which is often the primary business goal. The lower precision is an acceptable consequence, as it is generally preferable to investigate a few legitimate transactions (false positives) than to miss a costly fraudulent one (false negative).
+
+Future Scope & Improvements
+While the current model serves as a strong baseline, there are several ways it could be improved:
+
+Advanced Sampling Techniques: Instead of just using class_weight, techniques like SMOTE (Synthetic Minority Over-sampling Technique) could be used to generate synthetic fraud examples, potentially improving the model's ability to learn fraud patterns.
+
+More Complex Models: Experimenting with more complex models like Random Forest or XGBoost could capture more intricate patterns in the data and potentially lead to better performance.
+
+Feature Engineering: Although the features are anonymized, further analysis could be done to see if new features can be created from the existing ones to improve model accuracy.
+
+Threshold Tuning: The classification threshold (defaulting to 0.5) could be tuned to find a better balance between precision and recall, depending on the specific business requirements for minimizing risk vs. customer friction.
+
 How to Run
 Clone the repository:
 
-git clone [https://github.com/YourUsername/Your-Repo-Name.git](https://github.com/adityadangayach655-ops/credit_card_fraud_detection)
+git clone https://github.com/YourUsername/Your-Repo-Name.git
 
 Create and activate a conda environment:
 
@@ -57,4 +77,3 @@ Launch the Jupyter Notebook:
 jupyter notebook
 
 Open the project notebook file (.ipynb) and run the cells.
-
