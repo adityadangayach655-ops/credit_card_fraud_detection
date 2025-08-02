@@ -4,7 +4,7 @@ This project demonstrates a classic machine learning approach to identifying fra
 Dataset
 This project uses the "Credit Card Fraud Detection" dataset from Kaggle. It contains anonymized transactions made by European cardholders over a two-day period in September 2013.
 
-Download Link: Kaggle: Credit Card Fraud Detection
+Download Link: Kaggle: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 Project Overview
 The goal of this project is to train a model that can distinguish between legitimate and fraudulent credit card transactions. Given the anonymized transaction data, we build a classification model that is optimized to catch rare fraudulent events while minimizing false alarms.
@@ -41,7 +41,7 @@ Evaluation: The model's performance was evaluated on the unseen test set using a
 How to Run
 Clone the repository:
 
-git clone https://github.com/YourUsername/Your-Repo-Name.git
+git clone [https://github.com/YourUsername/Your-Repo-Name.git](https://github.com/adityadangayach655-ops/credit_card_fraud_detection)
 
 Create and activate a conda environment:
 
@@ -57,3 +57,4 @@ Launch the Jupyter Notebook:
 jupyter notebook
 
 Open the project notebook file (.ipynb) and run the cells.
+
